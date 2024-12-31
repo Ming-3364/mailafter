@@ -23,7 +23,7 @@ use `msmtp`:
     tls_trust_file /etc/ssl/certs/ca-certificates.crt
     logfile        ~/.msmtp.log
 
-    # QQ邮箱账户配置
+    # QQ
     account        qq
     host           smtp.qq.com
     port           587
@@ -31,27 +31,25 @@ use `msmtp`:
     user           your_email@qq.com
     password       your_smtp_auth_code
 
-    # 设置默认账户
+    # set default account
     account default : qq
     ```
 
-## 2. test
+3. test
 
 Try following command:
 ```
 echo "This is a test mail." | msmtp <target@email.com>
 ```
 
-## 3. Create mailafter
-
-Create file `~/bin/mailafter`, chmod and copy [mailafter](mailafter) into it.
+## 2. Set up mailafter
 
 ```
-touch ~/bin/mailafter
-chmod +x ~/bin/mailafter
+git clone https://github.com/Ming-3364/mailafter.git
+./setup.sh
 ```
 
-*Modify `MAIL_TO` in `~/bin/mailafter`*
+**Modify `MAIL_TO` in `mailafter`**
 
 ## 4. Usage
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Command Execution Details</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .details {
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+            max-width: 600px;
+            font-size: 16px;
+        }
+        .details p {
+            margin: 0;
+            padding: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="details">
+        <p><strong>Command:</strong> {{COMMAND}}</p>
+        <p><strong>Return code:</strong> {{EXIT_CODE}}</p>
+        </p>
+        <p><strong>From:</strong> {{START_TIME}}</p>
+        <p><strong>To:</strong> {{END_TIME}}</p>
+        <p><strong>Use:</strong> {{USED_TIME}}</p>
+    </div>
+</body>
+</html>
