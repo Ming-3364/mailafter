@@ -1,5 +1,9 @@
-MAIL_TO="2379637215@qq.com"
-MAIL_SUBJECT=""
+# set your email address here!!!
+MAIL_TO=""
+if [ -z "$MAIL_TO" ]; then
+    echo "Error: MAIL_TO is empty. Please specify a recipient email address."
+    exit 1
+fi
 
 SCRIPT_DIR=$(cd "$(dirname "$(readlink -f "$0")")" && pwd)
 TEMPLATE_FILE="$SCRIPT_DIR/email-template.html"
