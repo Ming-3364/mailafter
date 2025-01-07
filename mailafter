@@ -1,7 +1,7 @@
 # set your email address here!!!
 MAIL_TO=""
 if [ -z "$MAIL_TO" ]; then
-    echo "Error: MAIL_TO is empty. Please specify a recipient email address."
+    echo "Error: MAIL_TO is empty. Please specify a recipient email address in $(readlink -f "$0")"
     exit 1
 fi
 

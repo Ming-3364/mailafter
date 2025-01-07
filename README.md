@@ -1,4 +1,5 @@
 # mailafter
+
 Send e-mail after long time job finish.
 
 ## 1. set up mail
@@ -7,15 +8,16 @@ use `msmtp`:
 
 1. install:
 
-    ```
-    sudp apt install msmtp
+    ``` bash
+    sudo apt install msmtp
     ```
 
 2. config:
 
     Create config file by `nano ~/.msmtprc`, and config your smtp server.
     A example use qq is below:
-    ```
+
+    ``` bash
     # Default settings
     defaults
     auth           on
@@ -35,16 +37,24 @@ use `msmtp`:
     account default : qq
     ```
 
+    NOTE: `~/.msmtprc` contains secrets and therefore must have no more than user read/write permissions.
+    You should change it to 600:
+
+    ``` bash
+    chmod 600 ~/.msmtprc
+    ```  
+
 3. test
 
-Try following command:
-```
-echo "This is a test mail." | msmtp <target@email.com>
-```
+    Try following command:
+
+    ``` bash
+    echo "This is a test mail." | msmtp <target@email.com>
+    ```
 
 ## 2. Set up mailafter
 
-```
+``` bash
 git clone https://github.com/Ming-3364/mailafter.git
 ./setup.sh
 ```
@@ -53,6 +63,6 @@ git clone https://github.com/Ming-3364/mailafter.git
 
 ## 4. Usage
 
-```
+``` bash
 mailafter <your_command>
 ```
